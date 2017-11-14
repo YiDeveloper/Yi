@@ -43,7 +43,7 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 CBigNum bnProofOfStakeLimitV2(~uint256(0) >> 34);
 
-unsigned int nStakeMinAge = 3 * 60; // 72 hours
+unsigned int nStakeMinAge = 75 * 60 * 60; // 75 hours
 unsigned int nModifierInterval = 10 * 60; // time to elapse before new modifier is computed
 
 int nCoinbaseMaturity = 15;  //15
@@ -1138,10 +1138,6 @@ int64_t GetProofOfWorkReward(int64_t nFees, int nHeight)
     if(pindexBest->nHeight > 5000)
     {
         nSubsidy = 15 * COIN;  
-    }
-    if(pindexBest->nHeight > 150000)
-    {
-        nSubsidy = 1.5 * COIN;  
     }
 
     LogPrint("creation", "GetProofOfWorkReward() : create=%s nSubsidy=%d nHeight=%d\n", FormatMoney(nSubsidy), nSubsidy, nHeight);

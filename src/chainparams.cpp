@@ -85,9 +85,9 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
        // printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-      // printf("merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-        assert(hashGenesisBlock == uint256("0x6e63025da5bd0721303f35e62ec8452a3e684cfd99598ecea14ca198e97dc2c8"));
-        assert(genesis.hashMerkleRoot == uint256("0x1263371e91334a3ac4729b1f2580d779f671c3650c5782264260c03aa86dfce1"));
+       // printf("merkle = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+        assert(hashGenesisBlock == uint256("0x998d052eb1faff10066d1457e55a5982f952d1f084b9dcf538abc1765ecbcc09"));
+        assert(genesis.hashMerkleRoot == uint256("0x94b6b8b6f2990f394b846488fdaf9ce3d2780035bdfe208be383ed83904cffe7"));
 
         vSeeds.push_back(CDNSSeedData("n0", "176.121.246.225"));
 
@@ -100,7 +100,7 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
-        nLastPOWBlock = 100;
+        nLastPOWBlock = 150000;
     }
 
     virtual const CBlock& GenesisBlock() const { return genesis; }
@@ -141,7 +141,7 @@ public:
         genesis.nTime    = 1509962987;
         genesis.nNonce = 2216093;
 
-        assert(hashGenesisBlock == uint256("0x6e63025da5bd0721303f35e62ec8452a3e684cfd99598ecea14ca198e97dc2c8"));
+        assert(hashGenesisBlock == uint256("0x998d052eb1faff10066d1457e55a5982f952d1f084b9dcf538abc1765ecbcc09"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
