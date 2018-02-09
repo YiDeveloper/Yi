@@ -1,4 +1,4 @@
-Yicoin
+# Yicoin
 
 The idea of this coin is small mining POW and fast switch to PoS with high ROI
 
